@@ -102,7 +102,7 @@ var Cerealizer = function (config) {
           return base_json;
         }
       } else if (caller.is_master) {
-        if (Object.keys(record[att_name]).length > 2) {
+        if (typeof record[att_name] == 'object'  && Object.keys(record[att_name]).length > 2) {
           new Cerealize(record[att_name], has_x[att_name], caller ).then(function(res) {
             base_json[att_name] = res[Object.keys(res)[0]];
             return base_json;
@@ -112,7 +112,7 @@ var Cerealizer = function (config) {
           return base_json;
         // att_value = new Cerealize(record[att_name], has_x[att_name], caller )
         } else {
-          if (_.includes(Object.keys(base_json), att_name)) {
+          if (_.contains(Object.keys(base_json), att_name)) {
             base_json[att_name] = null;
             sails.log.debug('Master has no attribute: ' + att_name);
           }
