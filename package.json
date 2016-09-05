@@ -1,0 +1,29 @@
+{
+  "name": "sails-hook-cerealize",
+  "version": "1.0.0",
+  "description": "A serializer similar in syntax use to rails active model serializers",
+  "main": "index.js",
+  "sails": {
+    "isHook": true,
+    "hookName": "cerealize"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "serializer",
+    "json",
+    "hook",
+    "sails-hook",
+    "sails-serializer",
+    "sails-cerealizer"
+  ],
+  "author": "Raymond L Whatley III",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "pluralize": "^3.0.0",
+    "sails-build-dictionary": "^0.10.1"
+  }
+}
