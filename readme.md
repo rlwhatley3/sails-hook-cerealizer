@@ -1,15 +1,20 @@
-### Sails-Hook-Cerealizer
-
+## Sails-Hook-Cerealizer
+========================
 Provides json serialization for nested records with similar syntax to the [ActiveModelSerializers](https://github.com/rails-api/active_model_serializers)
 
 
-### The Cerealizer
+### Installation
+```
+npm install --save sails-hook-cerealize
+```
+
+#### The Cerealizer
   You will need two services. 
   One that news up a Cerealize on call (since they are being globally namespaced anyways).
   The Second will be a Cerealizer, which will be used to set your individual serializer configurations.
 
   I have provided a view of how the models for the example are set up for relational data purposes only. Cerealize is model agnostic, and only cares about the records you pass it, and that there is a Cerealizer by the name you provide to its configuration.
-
+====================================================================================================
 Cerealize
 ```javascript
 var Cerealize = require('sails-hook-cerealize/Cerealize.js');
