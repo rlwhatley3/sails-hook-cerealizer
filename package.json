@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-cerealize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A serializer similar in syntax use to rails active model serializers",
   "main": "index.js",
   "sails": {
