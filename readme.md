@@ -8,6 +8,8 @@ Provides json serialization for nested records with similar syntax to the [Activ
   One that news up a Cerealize on call (since they are being globally namespaced anyways).
   The Second will be a Cerealizer, which will be used to set your individual serializer configurations.
 
+  I have provided a view of how the models for the example are set up for relational data purposes only. Cerealize is model agnostic, and only cares about the records you pass it, and that there is a Cerealizer by the name you provide to its configuration.
+
 Cerealize
 ```javascript
 var Cerealize = require('sails-hook-cerealize/Cerealize.js');
@@ -229,7 +231,6 @@ module.exports = KlassSerializer
 BaseAbilityScoreSerializer
 ```coffeescript
 BaseAbilityScore = new Cerealizer([
-  # { as: 'Ability_score' },
   { attributes: ['charisma', 'constitution', 'dexterity', 'intelligence', 'strength', 'wisdom'] }
 ]);
 
