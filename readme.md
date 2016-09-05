@@ -4,12 +4,22 @@ Provides json serialization for nested records with similar syntax to the [Activ
 
 
 ### The Cerealizer
-  Start with a service that news up a Cerealizer on call (since they are being globally namespaced anyways), something like this.
+  You will need two services. 
+  One that news up a Cerealize on call (since they are being globally namespaced anyways).
+  The Second will be a Cerealizer, which will be used to set your individual serializer configurations.
 
+Cerealize
 ```javascript
 var Cerealize = require('sails-hook-cerealize/Cerealize.js');
 
 module.exports = function(records, config)  { return (new Cerealize(records, config)); }
+```
+
+Cerealizer
+```javascript
+var Cerealizer = require('sails-hook-cerealize/Cerealizer.js');
+
+module.exports = Cerealizer;
 ```
 
 
