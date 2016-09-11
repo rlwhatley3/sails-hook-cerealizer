@@ -21,7 +21,7 @@ module.exports = function (sails) {
   function loadSerializers(cb) {
     dic_options = {
       dirname       : path.resolve(sails.config.appPath, 'api/serializers'),
-      filter        : /(.+)\.(js|coffee|litcoffee)$/,
+      filter        : /(.+)(Serializer)\.(js|coffee|litcoffee)$/,
       depth         :5,
       useGlobalIdForKeyName: true,
       identity: false

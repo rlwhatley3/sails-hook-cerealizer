@@ -9,9 +9,9 @@ module.exports = {
     var name;
 
     if (config.serializer != null) {
-      name = config.serializer.toLowerCase();
+      name = config.serializer;
     } else if (config.each_serializer != null) {
-      name = config.each_serializer.toLowerCase();
+      name = config.each_serializer;
     } else {
       sails.log.debug('Must define a serializer in the config.')
     }

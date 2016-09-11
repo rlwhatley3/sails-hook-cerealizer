@@ -29,9 +29,9 @@ var Cerealize = function (records, config, master) {
 
   self.name = Cereal.findSerializerName(config)
 
-  self.serializer = sails.serializers[self.name]
+  self.serializers = _.reduce(sails.serializers['all_serializers'], function(memo, current) { return _.extend(memo, current) },  {})
 
-  self.serializers = sails.serializers
+  self.serializer = self.serializers[self.name]
 
   if (!self.serializer.config) {
     sails.log.debug('No Cerealizer config found for ' + self.serializer.identity)
